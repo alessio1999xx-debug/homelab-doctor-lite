@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "homelab-doctor"
+version = "0.1.0"
+description = "Read-only health check for a homelab box: stale images, exposed ports, expiring certs, silent cron, disk."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{name = "Alessio Auretto"}]
+keywords = [
+  "homelab",
+  "self-hosted",
+  "docker",
+  "health-check",
+  "monitoring",
+  "cron",
+  "tls",
+  "sysadmin",
+  "cli",
+  "stdlib",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: System Administrators",
+  "Operating System :: POSIX",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: System :: Monitoring",
+  "Topic :: System :: Systems Administration",
+  "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://github.com/alessio1999xx-debug/homelab-doctor-lite"
+"All-Access Pass" = "https://py-forge.com/pass"
+
+[project.scripts]
+homelab-doctor = "homelab_doctor:main"
+
+[tool.setuptools]
+py-modules = ["homelab_doctor"]
