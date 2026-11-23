@@ -6,7 +6,7 @@ homelab-doctor is one command that looks at those five things on a single Linux 
 
 Need webhook / email alerts, a deeper Docker firewall audit, or JSON output? That is what the full [PyForge](https://py-forge.com/pass?utm_source=github&utm_medium=readme&utm_campaign=homelab-doctor-lite) tools are for (one-time payment, yours to keep, no subscription). A "Go further" section later in this README points at the matching product for each check. Or get every tool, current and future, with the [All-Access Pass](https://py-forge.com/pass?utm_source=github&utm_medium=readme&utm_campaign=homelab-doctor-lite) ($99, one payment).
 
-- Optional `pip install` (coming soon), or just download the one file. No agent to run, no extra packages.
+- Optional `pip install`, or just download the one file. No agent to run, no extra packages.
 - Image checks use only `GET` requests to the Docker socket, plus anonymous `HEAD`/tag-list calls to public registries. No image layers are downloaded.
 - Port checks read `ss` (or `/proc/net/tcp`) and Docker's published ports. They do not change firewall rules, and they are not a full iptables / `DOCKER-USER` audit.
 - Certificate checks only cover hosts you pass with `--cert` or a certs file.
@@ -15,7 +15,12 @@ Need webhook / email alerts, a deeper Docker firewall audit, or JSON output? Tha
 
 ## Install
 
-`pip install homelab-doctor` is coming soon (PyPI trusted publishing, same flow as the other lite tools). Until the package is published, download the single file (Python 3.9+, standard library only, no extra packages):
+```bash
+pip install homelab-doctor
+homelab-doctor --help
+```
+
+Or download the single file (Python 3.9+, standard library only, no extra packages):
 
 ```bash
 curl -fsSLO https://raw.githubusercontent.com/alessio1999xx-debug/homelab-doctor-lite/main/homelab_doctor.py
